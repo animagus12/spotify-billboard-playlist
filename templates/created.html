@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/5b50aa863e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/created.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/fonts/icomoon/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/tableStyle.css') }}" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class = "title">Your playlist is succesfully created.</h1>
+        <div class="label">
+            Here's is a link to your plalist!
+        </div>
+        <div class="copy-text">
+            <input type="text" class="text" value="{{ link }}" />
+            <button><i class="fa-regular fa-clone"></i></button>
+        </div>
+
+        <br>
+        <br>
+
+        <h3>Whats next?</h3>
+
+        <p><span><strong>Step 1:  </strong></span>Please go to the above link.</p>
+        <p><span><strong>Step 2:  </strong></span>Click on the three dotted icon beside play.</p>
+        <p><span><strong>Step 3:  </strong></span>Click "Add to Profile"</p>
+        <p><span><strong>Step 4:  </strong></span>Enjoy! Hope you like your new collection!!</p>
+    </div>
+
+    <script src="{{ url_for('static', filename = '/js/created.js') }}"></script>
+</body>
+</html>
+

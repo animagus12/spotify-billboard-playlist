@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comaptible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/fonts/icomoon/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/tableStyle.css') }}" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="grad">
+        <div class="content">
+            <div class="container">
+                <h2 class="mb-5"><span class="title">Billboard Hot 100 | </span>{{ date }}</h2>
+
+                <form class="button" name="form" action="" method="POST">
+                    {{ form.csrt_token }}
+                    {{ form.hidden_tag() }}
+                    <p class="button-78" role="button">
+                        {{ form.submit(class_="button-78") }}
+                    </p>
+                </form>
+
+                <div class="table-responsive">
+                    {% if result %}
+                    <table class="table table-striped custom-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sl. No.</th>
+                                <th scope="col">Song</th>
+                                <th scope="col">Artist</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for key, value in result.items() %}
+                            <tr scope="row">
+                                <td>{{ loop.index }}</td>
+                                <td>{{ key }}</td>
+                                <td>{{ value }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                    <h1>Sorry, list not created yet!</h1>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename = '/js/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = '/js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = '/js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = '/js/main.js') }}"></script>
+</body>
+
+</html>

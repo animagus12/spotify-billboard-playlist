@@ -1,0 +1,94 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	background: black;
+}
+
+.title {
+	color: #1ed760
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.label {
+	padding: 10px;
+	font-size: 18px;
+	color: white;
+}
+
+.text {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.copy-text {
+	position: relative;
+	padding: 10px;
+	background: #121212;
+	border: 1px solid #1ed760;
+	border-radius: 10px;
+	display: flex;
+}
+.copy-text input.text {
+	padding: 10px;
+	font-size: 18px;
+	color: #555;
+	border: none;
+	outline: none;
+}
+.copy-text button {
+	padding: 15px 20px 15px 20px;
+	background: #1ed760;
+	color: #fff;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.copy-text button:active {
+	background: #21eb69;
+}
+.copy-text button:before {
+	content: "Copied";
+	position: absolute;
+	top: -45px;
+	right: 0px;
+	background: #1ed760;
+	padding: 8px 10px;
+	border-radius: 20px;
+	font-size: 15px;
+	display: none;
+}
+.copy-text button:after {
+	content: "";
+	position: absolute;
+	top: -20px;
+	right: 25px;
+	width: 10px;
+	height: 10px;
+	background: #1ed760;
+	transform: rotate(45deg);
+	display: none;
+}
+.copy-text.active button:before,
+.copy-text.active button:after {
+	display: block;
+}
+
+div h3 {
+	color: #1ed760;
+}
+
+span strong {
+	font-size: large;
+}

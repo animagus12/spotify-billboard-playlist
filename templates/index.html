@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comaptible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" />
+    <script src="{{ url_for('static', filename = '/js/script.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Spotify</title>
+
+</head>
+
+<body>
+    <div class='container'>
+        <p class = "title">Spotify Playlist</p>
+        <form name="form" action="" method="POST">
+            {{ form.csrt_token }}
+            {{ form.date.label }} {{ form.date(class = 'datepicker') }} {{ form.hidden_tag() }}
+            <p class="button-78" role="button">
+                {{ form.submit(class_="button-78") }}
+            </p>
+        </form>
+
+        
+
+        <img src="{{ url_for('static', filename = '/images/logo.png') }}" alt="Spotify Logo" class="logo">
+
+    </div>
+</body>
+
+</html>
